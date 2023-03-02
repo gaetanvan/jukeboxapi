@@ -11,10 +11,8 @@ class JukeboxController extends AbstractController
 {
 
     #[Route('/', name: 'app_jukebox')]
-    public function index(CallApiService $service): Response
+    public function index(): Response
     {
-        \dd($service->getMusicData());
-
         return $this->render('jukebox/index.html.twig', [
             'controller_name' => 'JukeboxController',
         ]);
